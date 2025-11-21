@@ -1,0 +1,136 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+.hidden { display: none; }
+section { padding: 20px; }
+
+/* Topbar */
+.topbar {
+  background: #2563eb;
+  color: #fff;
+  padding: 14px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Forms */
+.form {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 14px; margin-bottom: 6px; color: #475569; }
+.field input, .field select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+.primary, .danger, .link {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.primary { background: #2563eb; color: #fff; }
+.danger { background: #dc2626; color: #fff; }
+.link { background: transparent; color: #2563eb; }
+
+/* Dashboard */
+#dashboard {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+.video-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.video-box .name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.video-box video {
+  width: 100%;
+  height: 140px;
+  background: #000;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Self-view */
+#self-view {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 160px;
+  height: 120px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+#self-view video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fullscreen */
+#fullscreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,0.9);
+  z-index: 200;
+  padding: 20px;
+}
+#fullscreen-video-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 80vh;
+}
+#fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#fullscreen .actions {
+  margin-top: 12px;
+  justify-content: center;
+}
+
